@@ -129,7 +129,7 @@ const Encabezado = () => {
                 className={estaColapsado ? "text-black" : "text-white"}
               >
                 {estaColapsado ? <i className="bi-house-door-fill me-2"></i> : null}
-                <strong>Detalles_Compras</strong>
+                <strong>Detalles Compras</strong>
               </Nav.Link>
 
               {/* Opción de navegación a Detalles_Ventas*/}
@@ -138,7 +138,7 @@ const Encabezado = () => {
                 className={estaColapsado ? "text-black" : "text-white"}
               >
                 {estaColapsado ? <i className="bi-house-door-fill me-2"></i> : null}
-                <strong>Detalles_Ventas</strong>
+                <strong>Detalles Ventas</strong>
               </Nav.Link>
 
               {/* Opción de navegación a Productos*/}
