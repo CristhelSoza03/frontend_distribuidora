@@ -2,9 +2,16 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Paginacion from '../ordenamiento/Paginacion';
 
 // Declaración del componente TablaClientes que recibe props
-const TablaClientes = ({ clientes, cargando, error }) => {
+const TablaClientes = ({
+   clientes,
+   cargando, 
+   totalElementos, 
+   elementosPorPagina, 
+   paginaActual, 
+   establecerPaginaActual}) => {
   // Renderizado condicional según el estado recibido por props
   if (cargando) {
     return <div>Cargando clientes...</div>; // Muestra mensaje mientras carga
@@ -15,6 +22,7 @@ const TablaClientes = ({ clientes, cargando, error }) => {
 
   // Renderizado de la tabla con los datos recibidos
   return (
+    <>
     <Table striped bordered hover responsive>
       <thead>
         <tr>
@@ -39,6 +47,13 @@ const TablaClientes = ({ clientes, cargando, error }) => {
         ))}
       </tbody>
     </Table>
+    <Paginacion
+    elementosPorPagina={elementosPorPagina}
+    totalElementos={totalElementos}
+    paginaActual={paginaActual}
+    establecerPaginaActual={establecerPaginaActual}
+  />
+    </>
   );
 };
 
